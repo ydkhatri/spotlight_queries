@@ -1,7 +1,7 @@
 Application usage for macOS DATA volume's spotlight database
 ```SQL
 SELECT kMDItemDisplayName, _kMDItemFileName, kMDItemUseCount, kMDItemUsedDates, kMDItemLastUsedDate  
-FROM "Spotlight-1-store"
+FROM "Spotlight-1-store" -- change to your table name
 WHERE kMDItemKind LIKE "Application" and kMDItemUseCount not like ""
 ORDER BY kMDItemUseCount DESC
 
@@ -10,7 +10,7 @@ ORDER BY kMDItemUseCount DESC
 Application usage for macOS SYSTEM volume's spotlight database
 ```SQL
 SELECT kMDItemDisplayName, _kMDItemFileName, kMDItemUseCount, kMDItemUsedDates, kMDItemLastUsedDate  
-FROM "Spotlight-BootVolume_1-store"
+FROM "Spotlight-BootVolume_1-store" -- change to your table name
 WHERE kMDItemKind LIKE "Application" and kMDItemUseCount not like ""
 ORDER BY kMDItemUseCount DESC
 ```
